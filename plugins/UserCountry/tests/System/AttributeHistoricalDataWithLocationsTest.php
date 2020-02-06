@@ -10,7 +10,6 @@ namespace Piwik\Plugins\UserCountry\tests\System;
 
 use Piwik\Common;
 use Piwik\Db;
-use Piwik\Plugin;
 use Piwik\Plugins\UserCountry\Commands\AttributeHistoricalDataWithLocations;
 use Piwik\Tests\Fixtures\ManyVisitsWithGeoIP;
 use Piwik\Tests\Framework\TestCase\IntegrationTestCase;
