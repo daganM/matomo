@@ -32,7 +32,7 @@ class ModelTest extends SystemTestCase
      */
     private $model;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -101,7 +101,7 @@ class ModelTest extends SystemTestCase
         $total = $this->model->getMetricTotalValue($table, 'nb_visits');
 
         $this->assertEquals(17, $total);
-        $this->assertInternalType('integer', $total);
+        self::assertIsInt($total);
     }
 
     public function test_getMetricTotalValue_shouldReturnZeroIfMetricHasNoTotal()

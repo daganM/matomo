@@ -30,7 +30,7 @@ class TrackerTest extends IntegrationTestCase
     const TASKS_FINISHED_OPTION_NAME = "Tests.scheduledTasksFinished";
     const TASKS_STARTED_OPTION_NAME = "Tests.scheduledTasksStarted";
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -359,7 +359,7 @@ class TrackerTest extends IntegrationTestCase
             $initialTask = new Task($this, 'markCustomTaskExecuted', null, Schedule::factory('hourly'));
             $tasksToAdd = array_merge(array($initialTask), $tasksToAdd);
 
-            $mockTaskLoader = $this->getMock('Piwik\Scheduler\TaskLoader', array('loadTasks'));
+            $mockTaskLoader = $this->createPartialMock('Piwik\Scheduler\TaskLoader', array('loadTasks'));
             $mockTaskLoader->expects($this->any())->method('loadTasks')->will($this->returnValue($tasksToAdd));
             $result['Piwik\Scheduler\TaskLoader'] = $mockTaskLoader;
         }

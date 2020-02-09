@@ -30,7 +30,7 @@ class SegmentFormatterTest extends IntegrationTestCase
 
     private $idSite;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -40,7 +40,7 @@ class SegmentFormatterTest extends IntegrationTestCase
         Translate::loadAllTranslations();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         Translate::reset();
     }

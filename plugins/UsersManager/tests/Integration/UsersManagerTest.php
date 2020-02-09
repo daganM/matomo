@@ -45,7 +45,7 @@ class UsersManagerTest extends IntegrationTestCase
 
     private $backupIdentity;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -67,7 +67,7 @@ class UsersManagerTest extends IntegrationTestCase
         $this->model = new Model();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         FakeAccess::$identity = $this->backupIdentity;
         parent::tearDown();
@@ -464,8 +464,8 @@ class UsersManagerTest extends IntegrationTestCase
 
         // check that all fields are the same
         $this->assertEquals($login, $user['login']);
-        $this->assertInternalType('string', $user['password']);
-        $this->assertInternalType('string', $user['date_registered']);
+        self::assertIsString($user['password']);
+        self::assertIsString($user['date_registered']);
         $this->assertEquals($email, $user['email']);
 
         //alias shouldn't be empty even if no alias specified

@@ -16,21 +16,21 @@ use Piwik\Translation\Translator;
  * @group Core
  * @group NumberFormatter
  */
-class NumberFormatterTest extends \PHPUnit_Framework_TestCase
+class NumberFormatterTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var Translator
      */
     private $translator;
 
-    public function setUp()
+    public function setUp(): void
     {
         \Piwik\Plugin\Manager::getInstance()->loadPluginTranslations();
 
         $this->translator = StaticContainer::get('Piwik\Translation\Translator');
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         $this->translator->reset();
     }

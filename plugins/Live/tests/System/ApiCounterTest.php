@@ -35,14 +35,14 @@ class ApiCounterTest extends SystemTestCase
     private $api;
     private $idSite = 1;
 
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         self::$testNow = strtotime('2018-02-03 04:45:40');
 
         parent::setUpBeforeClass();
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

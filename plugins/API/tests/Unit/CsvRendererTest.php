@@ -15,14 +15,14 @@ use Piwik\Plugins\API\Renderer\Csv;
  * @group Plugin
  * @group API
  */
-class CsvRendererTest extends \PHPUnit_Framework_TestCase
+class CsvRendererTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var Csv
      */
     private $builder;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->builder = $this->makeBuilder(array('method' => 'MultiSites_getAll', 'convertToUnicode' => 0));
     }

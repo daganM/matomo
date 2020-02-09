@@ -29,7 +29,7 @@ class RequestTest extends UnitTestCase
     private $request;
     private $time;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

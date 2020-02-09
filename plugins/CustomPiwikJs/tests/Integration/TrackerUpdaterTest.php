@@ -24,7 +24,7 @@ class TrackerUpdaterTest extends IntegrationTestCase
     private $dir;
     private $piwikJsChangedEventPath = null;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->dir = PIWIK_DOCUMENT_ROOT . '/plugins/CustomPiwikJs/tests/resources/';
@@ -33,7 +33,7 @@ class TrackerUpdaterTest extends IntegrationTestCase
         $this->cleanUp();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         parent::tearDown();
 

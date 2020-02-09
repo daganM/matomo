@@ -19,14 +19,14 @@ require_once PIWIK_INCLUDE_PATH . '/plugins/Actions/Actions.php';
  * @group ArchiverTest
  * @group Plugins
  */
-class ArchiverTests extends \PHPUnit_Framework_TestCase
+class ArchiverTests extends \PHPUnit\Framework\TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         Translate::loadAllTranslations();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         Translate::reset();
     }

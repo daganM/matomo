@@ -19,7 +19,7 @@ use Piwik\Translation\Translator;
 /**
  * @group Core
  */
-class PeriodTest extends \PHPUnit_Framework_TestCase
+class PeriodTest extends \PHPUnit\Framework\TestCase
 {
     public function testGetId()
     {
@@ -37,19 +37,19 @@ class PeriodTest extends \PHPUnit_Framework_TestCase
     {
         $period = new Day(Date::today());
         $label = $period->getLabel();
-        $this->assertInternalType('string', $label);
+        self::assertIsString($label);
         $this->assertNotEmpty($label);
         $period = new Week(Date::today());
         $label = $period->getLabel();
-        $this->assertInternalType('string', $label);
+        self::assertIsString($label);
         $this->assertNotEmpty($label);
         $period = new Month(Date::today());
         $label = $period->getLabel();
-        $this->assertInternalType('string', $label);
+        self::assertIsString($label);
         $this->assertNotEmpty($label);
         $period = new Year(Date::today());
         $label = $period->getLabel();
-        $this->assertInternalType('string', $label);
+        self::assertIsString($label);
         $this->assertNotEmpty($label);
     }
 

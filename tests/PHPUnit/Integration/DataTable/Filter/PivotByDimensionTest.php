@@ -39,7 +39,7 @@ class PivotByDimensionTest extends IntegrationTestCase
      */
     public $segmentUsedToGetIntersected = array();
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -380,7 +380,7 @@ class PivotByDimensionTest extends IntegrationTestCase
 
     public function provideContainerConfig()
     {
-        $proxyMock = $this->getMockBuilder('stdClass')->setMethods(array('call'))->getMock();
+        $proxyMock = $this->getMockBuilder('stdClass')->addMethods(array('call'))->getMock();
         $proxyMock->expects($this->any())->method('call')->willReturnCallback(function ($className, $methodName, $parameters) {
             if ($className == "\\Piwik\\Plugins\\UserCountry\\API"
                 && $methodName == 'getCity'

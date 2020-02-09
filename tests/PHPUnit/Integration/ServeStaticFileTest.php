@@ -47,9 +47,9 @@ define("PARTIAL_BYTE_START", 1204);
 define("PARTIAL_BYTE_END", 14724);
 
 // If the static file server has not been requested, the standard unit test case class is defined
-class ServeStaticFileTest extends \PHPUnit_Framework_TestCase
+class ServeStaticFileTest extends \PHPUnit\Framework\TestCase
 {
-    public function tearDown()
+    public function tearDown(): void
     {
         parent::tearDown();
         if(!chmod(TEST_FILE_LOCATION, 0644)) {

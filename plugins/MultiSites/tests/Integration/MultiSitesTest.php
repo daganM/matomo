@@ -23,7 +23,7 @@ class MultiSitesTest extends IntegrationTestCase
 {
     protected $idSiteAccess;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

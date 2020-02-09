@@ -16,9 +16,9 @@ use Piwik\Translate;
 
 /**
  */
-class DateTest extends \PHPUnit_Framework_TestCase
+class DateTest extends \PHPUnit\Framework\TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -26,7 +26,7 @@ class DateTest extends \PHPUnit_Framework_TestCase
         date_default_timezone_set('UTC');
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         Date::$now = null;
         date_default_timezone_set('UTC');

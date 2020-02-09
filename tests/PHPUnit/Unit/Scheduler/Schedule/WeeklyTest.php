@@ -14,7 +14,7 @@ use Piwik\Scheduler\Schedule\Weekly;
 /**
  * @group Scheduler
  */
-class WeeklyTest extends \PHPUnit_Framework_TestCase
+class WeeklyTest extends \PHPUnit\Framework\TestCase
 {
     public static $_JANUARY_01_1971_09_10_00; // initialized below class declaration
     public static $_JANUARY_04_1971_00_00_00;
@@ -24,7 +24,7 @@ class WeeklyTest extends \PHPUnit_Framework_TestCase
     public static $_JANUARY_15_1971_00_00_00;
     public static $_JANUARY_08_1971_00_00_00;
 
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         parent::setUpBeforeClass();
     }
@@ -182,7 +182,7 @@ class WeeklyTest extends \PHPUnit_Framework_TestCase
      */
     private function getWeeklyMock($currentTime)
     {
-        $mock = $this->getMock('Piwik\Scheduler\Schedule\Weekly', array('getTime'));
+        $mock = $this->createPartialMock('Piwik\Scheduler\Schedule\Weekly', array('getTime'));
         $mock->expects($this->any())
             ->method('getTime')
             ->will($this->returnValue($currentTime));

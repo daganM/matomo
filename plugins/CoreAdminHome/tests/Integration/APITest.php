@@ -30,7 +30,7 @@ class APITest extends \Piwik\Tests\Framework\TestCase\IntegrationTestCase
      */
     private $api;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->api = API::getInstance();

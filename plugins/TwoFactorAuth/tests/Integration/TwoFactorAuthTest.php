@@ -44,7 +44,7 @@ class TwoFactorAuthTest extends IntegrationTestCase
     private $userPassword = '123abcDk3_l3';
     private $user2faSecret = '123456';
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -64,7 +64,7 @@ class TwoFactorAuthTest extends IntegrationTestCase
         unset($_GET['authCode']);
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         unset($_GET['authCode']);
     }

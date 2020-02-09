@@ -32,7 +32,7 @@ class SitesTableTest extends IntegrationTestCase
      */
     private $backendSite2;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

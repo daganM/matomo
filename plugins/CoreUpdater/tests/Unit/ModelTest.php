@@ -16,14 +16,14 @@ use Piwik\Plugins\CoreUpdater\Model;
  * @group Unit
  * @group Plugins
  */
-class ModelTest extends \PHPUnit_Framework_TestCase
+class ModelTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var Model
      */
     private $model;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

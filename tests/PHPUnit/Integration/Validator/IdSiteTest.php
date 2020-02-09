@@ -18,7 +18,7 @@ use Piwik\Validators\IdSite;
  */
 class IdSiteTest extends IntegrationTestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         Fixture::createWebsite('2012-03-04 05:06:07');

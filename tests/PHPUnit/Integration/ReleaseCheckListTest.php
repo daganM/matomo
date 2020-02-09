@@ -24,13 +24,13 @@ use RecursiveIteratorIterator;
  * @group Core
  * @group ReleaseCheckListTest
  */
-class ReleaseCheckListTest extends \PHPUnit_Framework_TestCase
+class ReleaseCheckListTest extends \PHPUnit\Framework\TestCase
 {
     private $globalConfig;
 
     const MINIMUM_PHP_VERSION = '7.2.0';
 
-    public function setUp()
+    public function setUp(): void
     {
         $iniReader = new IniReader();
         $this->globalConfig = $iniReader->readFile(PIWIK_PATH_TEST_TO_ROOT . '/config/global.ini.php');

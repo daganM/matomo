@@ -22,7 +22,7 @@ use Piwik\Tests\Integration\Settings\IntegrationTestCase;
 class SystemSettingTest extends IntegrationTestCase
 {
 
-    public function tearDown()
+    public function tearDown(): void
     {
         Config::getInstance()->MyPluginName = array();
         parent::tearDown();

@@ -36,7 +36,7 @@ class LogDataAnonymizerTest extends IntegrationTestCase
      */
     private $theFixture;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -49,7 +49,7 @@ class LogDataAnonymizerTest extends IntegrationTestCase
         $this->theFixture->setUpLocation();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         $this->theFixture->tearDownLocation();
     }

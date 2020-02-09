@@ -26,7 +26,7 @@ class ControllerTest extends IntegrationTestCase
 
     private $now;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->controller = new Controller();
@@ -47,7 +47,7 @@ class ControllerTest extends IntegrationTestCase
         Date::$now = Date::factory('2019-05-31')->getTimestamp();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         Option::deleteLike('Feedback.nextFeedbackReminder.%');
         $this->userModel->deleteUserOnly('user1');

@@ -33,14 +33,14 @@ class TestResponse extends Response {
  * @group Plugins
  * @group Tracker
  */
-class ResponseTest extends \PHPUnit_Framework_TestCase
+class ResponseTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var TestResponse
      */
     private $response;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->response = new TestResponse();

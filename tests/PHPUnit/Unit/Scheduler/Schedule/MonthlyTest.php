@@ -13,7 +13,7 @@ use Piwik\Scheduler\Schedule\Monthly;
 /**
  * @group Scheduler
  */
-class MonthlyTest extends \PHPUnit_Framework_TestCase
+class MonthlyTest extends \PHPUnit\Framework\TestCase
 {
     public static $_JANUARY_01_1971_09_00_00; // initialized below class definition
     public static $_JANUARY_02_1971_09_00_00;
@@ -25,7 +25,7 @@ class MonthlyTest extends \PHPUnit_Framework_TestCase
     public static $_FEBRUARY_21_1971_09_00_00;
     public static $_FEBRUARY_28_1971_00_00_00;
 
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         parent::setUpBeforeClass();
     }
@@ -271,7 +271,7 @@ class MonthlyTest extends \PHPUnit_Framework_TestCase
      */
     private function getMonthlyMock($currentTime)
     {
-        $mock = $this->getMock('Piwik\Scheduler\Schedule\Monthly', array('getTime'));
+        $mock = $this->createPartialMock('Piwik\Scheduler\Schedule\Monthly', array('getTime'));
         $mock->expects($this->any())
              ->method('getTime')
              ->will($this->returnValue($currentTime));

@@ -73,7 +73,7 @@ use ReflectionClass;
  *                merging some together.
  * @since 2.8.0
  */
-class Fixture extends \PHPUnit_Framework_Assert
+class Fixture extends \PHPUnit\Framework\Assert
 {
     const IMAGES_GENERATED_ONLY_FOR_OS = 'linux';
     const IMAGES_GENERATED_FOR_PHP = '5.6';
@@ -161,13 +161,13 @@ class Fixture extends \PHPUnit_Framework_Assert
     }
 
     /** Adds data to Piwik. Creates sites, tracks visits, imports log files, etc. */
-    public function setUp()
+    public function setUp(): void
     {
         // empty
     }
 
     /** Does any clean up. Most of the time there will be no need to clean up. */
-    public function tearDown()
+    public function tearDown(): void
     {
         // empty
     }

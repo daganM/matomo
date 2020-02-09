@@ -29,7 +29,7 @@ class RequestsTest extends IntegrationTestCase
      */
     private $requests;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -38,7 +38,7 @@ class RequestsTest extends IntegrationTestCase
         $this->requests = new Requests();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         // clean up your test here if needed
 

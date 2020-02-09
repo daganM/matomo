@@ -15,9 +15,9 @@ use Piwik\Plugin\Manager;
  * @group Core
  * @group Only2
  */
-class ApiRendererTest extends \PHPUnit_Framework_TestCase
+class ApiRendererTest extends \PHPUnit\Framework\TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         Manager::getInstance()->loadPlugins(array('API'));
     }

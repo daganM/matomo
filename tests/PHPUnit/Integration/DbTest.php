@@ -20,14 +20,14 @@ class DbTest extends IntegrationTestCase
 {
     private $dbReaderConfigBackup;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
         $this->dbReaderConfigBackup = Config::getInstance()->database_reader;
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         Db::destroyDatabaseObject();
         Config::getInstance()->database_reader = $this->dbReaderConfigBackup;

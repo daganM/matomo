@@ -74,7 +74,7 @@ class VisitDimensionTest extends IntegrationTestCase
      */
     private $conversionDimension;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

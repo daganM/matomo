@@ -12,7 +12,7 @@ namespace Piwik\Tests\Unit\Archiver;
 
 use Piwik\Archiver\Request;
 
-class RequestTest extends \PHPUnit_Framework_TestCase
+class RequestTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @dataProvider getTestDataForChangeDate

@@ -44,14 +44,14 @@ class DumbMockConfig extends \Piwik\Config
  * @group CoreAdminHome
  * @group CoreAdminHome_Unit
  */
-class ConfigSettingManipulationTest extends \PHPUnit_Framework_TestCase
+class ConfigSettingManipulationTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var Config
      */
     private $mockConfig;
 
-    protected function setUp()
+    public function setUp(): void
     {
         $this->mockConfig = new DumbMockConfig();
         $this->mockConfigData = array();

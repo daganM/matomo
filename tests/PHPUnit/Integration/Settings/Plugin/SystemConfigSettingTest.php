@@ -24,7 +24,7 @@ class SystemConfigSettingTest extends IntegrationTestCase
 {
     private $section = 'MySection';
 
-    public function tearDown()
+    public function tearDown(): void
     {
         $this->setConfigValues(array());
         parent::tearDown();

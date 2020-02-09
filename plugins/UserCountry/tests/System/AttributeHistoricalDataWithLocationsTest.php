@@ -32,7 +32,7 @@ class AttributeHistoricalDataWithLocationsTest extends IntegrationTestCase
      */
     public static $fixture = null;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

@@ -22,7 +22,6 @@ use Piwik\Tests\Framework\Mock\FakeAccess;
 use Piwik\Tests\Framework\TestCase\IntegrationTestCase;
 use Piwik\Translate;
 use Exception;
-use PHPUnit_Framework_Constraint_IsType;
 
 /**
  * Class Plugins_SitesManagerTest
@@ -33,7 +32,7 @@ use PHPUnit_Framework_Constraint_IsType;
  */
 class ApiTest extends IntegrationTestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -43,7 +42,7 @@ class ApiTest extends IntegrationTestCase
         FakeAccess::$superUser = true;
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         parent::tearDown();
 
@@ -171,7 +170,7 @@ class ApiTest extends IntegrationTestCase
         $url = "http://piwik.net/";
         $urlOK = "http://piwik.net";
         $idsite = API::getInstance()->addSite("name", $url);
-        $this->assertInternalType(PHPUnit_Framework_Constraint_IsType::TYPE_INT, $idsite);
+        self::assertIsInt($idsite);
 
         $siteInfo = API::getInstance()->getSiteFromId($idsite);
         $this->assertEquals($urlOK, $siteInfo['main_url']);
@@ -189,7 +188,7 @@ class ApiTest extends IntegrationTestCase
         $urls = array("http://piwik.net/", "http://piwik.com", "https://piwik.net/test/", "piwik.net/another/test");
         $urlsOK = array("http://piwik.net", "http://piwik.com", "http://piwik.net/another/test", "https://piwik.net/test");
         $idsite = API::getInstance()->addSite("super website", $urls);
-        $this->assertInternalType(PHPUnit_Framework_Constraint_IsType::TYPE_INT, $idsite);
+        self::assertIsInt($idsite);
 
         $siteInfo = API::getInstance()->getSiteFromId($idsite);
         $this->assertEquals($urlsOK[0], $siteInfo['main_url']);
@@ -205,7 +204,7 @@ class ApiTest extends IntegrationTestCase
     {
         $name = "supertest(); ~@@()''!£\$'%%^'!£ போ";
         $idsite = API::getInstance()->addSite($name, "http://piwik.net");
-        $this->assertInternalType(PHPUnit_Framework_Constraint_IsType::TYPE_INT, $idsite);
+        self::assertIsInt($idsite);
 
         $siteInfo = API::getInstance()->getSiteFromId($idsite);
         $this->assertEquals($name, $siteInfo['name']);
@@ -263,7 +262,7 @@ class ApiTest extends IntegrationTestCase
     {
         $name = "website ";
         $idsite = API::getInstance()->addSite($name, array("http://piwik.net", "http://piwik.com/test/"));
-        $this->assertInternalType(PHPUnit_Framework_Constraint_IsType::TYPE_INT, $idsite);
+        self::assertIsInt($idsite);
 
         $siteInfo = API::getInstance()->getSiteFromId($idsite);
         $this->assertEquals($name, $siteInfo['name']);
@@ -531,7 +530,7 @@ class ApiTest extends IntegrationTestCase
     {
         $name = "website ''";
         $idsite = API::getInstance()->addSite($name, array("http://piwik.net", "http://piwik.com/test/"));
-        $this->assertInternalType(PHPUnit_Framework_Constraint_IsType::TYPE_INT, $idsite);
+        self::assertIsInt($idsite);
 
         $siteInfo = API::getInstance()->getSiteFromId($idsite);
         $this->assertEquals($name, $siteInfo['name']);

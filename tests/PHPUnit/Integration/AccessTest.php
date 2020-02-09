@@ -356,7 +356,7 @@ class AccessTest extends IntegrationTestCase
      */
     public function testCheckUserHasViewAccessWithSomeAccessFailure()
     {
-        $mock = $this->getMockBuilder('Piwik\Access')->setMethods(array('getSitesIdWithAtLeastViewAccess'))->getMock();
+        $mock = $this->getMockBuilder('Piwik\Access')->onlyMethods(array('getSitesIdWithAtLeastViewAccess'))->getMock();
 
         $mock->expects($this->once())
             ->method('getSitesIdWithAtLeastViewAccess')
@@ -386,7 +386,7 @@ class AccessTest extends IntegrationTestCase
      */
     public function testCheckUserHasWriteAccessWithSomeAccessFailure()
     {
-        $mock = $this->getMockBuilder('Piwik\Access')->setMethods(array('getSitesIdWithAtLeastWriteAccess'))->getMock();
+        $mock = $this->getMockBuilder('Piwik\Access')->onlyMethods(array('getSitesIdWithAtLeastWriteAccess'))->getMock();
 
         $mock->expects($this->once())
             ->method('getSitesIdWithAtLeastWriteAccess')
@@ -413,7 +413,7 @@ class AccessTest extends IntegrationTestCase
 
     public function testCheckUserHasAdminAccessWithSomeAccessSuccessIdSitesAsString()
     {
-        $mock = $this->getMock(
+        $mock = $this->createMock(
             'Piwik\Access',
             array('getSitesIdWithAdminAccess')
         );
@@ -427,7 +427,7 @@ class AccessTest extends IntegrationTestCase
 
     public function testCheckUserHasAdminAccessWithSomeAccessSuccessAllSites()
     {
-        $mock = $this->getMock(
+        $mock = $this->createMock(
             'Piwik\Access',
             array('getSitesIdWithAdminAccess', 'getSitesIdWithAtLeastViewAccess')
         );
@@ -448,7 +448,7 @@ class AccessTest extends IntegrationTestCase
      */
     public function testCheckUserHasAdminAccessWithSomeAccessFailure()
     {
-        $mock = $this->getMock(
+        $mock = $this->createMock(
             'Piwik\Access',
             array('getSitesIdWithAdminAccess')
         );
@@ -697,7 +697,7 @@ class AccessTest extends IntegrationTestCase
     private function createPiwikAuthMockInstance()
     {
         return $this->getMockBuilder('Piwik\\Auth')
-                    ->setMethods(array('authenticate', 'getName', 'getTokenAuthSecret', 'getLogin', 'setTokenAuth', 'setLogin',
+                    ->onlyMethods(array('authenticate', 'getName', 'getTokenAuthSecret', 'getLogin', 'setTokenAuth', 'setLogin',
             'setPassword', 'setPasswordHash'))
                     ->getMock();
     }
@@ -705,7 +705,7 @@ class AccessTest extends IntegrationTestCase
     private function createAccessMockWithAccessToSitesButUnauthenticated($idSites)
     {
         $mock = $this->getMockBuilder('Piwik\Access')
-                     ->setMethods(array('getRawSitesWithSomeViewAccess', 'loadSitesIfNeeded'))
+                     ->onlyMethods(array('getRawSitesWithSomeViewAccess', 'loadSitesIfNeeded'))
                      ->getMock();
 
         // this method will be actually never called as it is unauthenticated. The tests are supposed to fail if it
@@ -730,7 +730,7 @@ class AccessTest extends IntegrationTestCase
             ->method('authenticate')
             ->will($this->returnValue(new AuthResult(AuthResult::SUCCESS, 'login', 'token')));
 
-        $mock = $this->getMockBuilder('Piwik\Access')->setMethods($methods)->getMock();
+        $mock = $this->getMockBuilder('Piwik\Access')->onlyMethods($methods)->getMock();
         $mock->reloadAccess($authMock);
 
         return $mock;

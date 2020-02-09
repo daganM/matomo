@@ -14,11 +14,11 @@ use Piwik\AuthResult;
 use Piwik\Session\SessionFingerprint;
 use Piwik\Session\SessionInitializer;
 
-class SessionInitializerTest extends \PHPUnit_Framework_TestCase
+class SessionInitializerTest extends \PHPUnit\Framework\TestCase
 {
     private $oldUnitTestValue;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -26,7 +26,7 @@ class SessionInitializerTest extends \PHPUnit_Framework_TestCase
         \Zend_Session::$_unitTestEnabled = true;
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         \Zend_Session::$_unitTestEnabled = $this->oldUnitTestValue;
 

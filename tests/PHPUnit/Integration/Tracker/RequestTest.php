@@ -34,7 +34,7 @@ class RequestTest extends IntegrationTestCase
 
     private $time;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

@@ -16,7 +16,7 @@ use Piwik\Widget\WidgetContainerConfig;
  * @group WidgetContainerConfig
  * @group WidgetContainerConfigTest
  */
-class WidgetContainerConfigTest extends \PHPUnit_Framework_TestCase
+class WidgetContainerConfigTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var WidgetContainerConfig
@@ -25,7 +25,7 @@ class WidgetContainerConfigTest extends \PHPUnit_Framework_TestCase
 
     private $id = 'MyTestContainer';
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->config = new WidgetContainerConfig();

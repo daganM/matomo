@@ -60,7 +60,7 @@ class PluginsArchiverTest extends IntegrationTestCase
      */
     private $pluginsArchiver;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

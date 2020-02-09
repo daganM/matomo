@@ -27,7 +27,7 @@ class LogDataAnonymizationsTest extends IntegrationTestCase
 
     private $tableName;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

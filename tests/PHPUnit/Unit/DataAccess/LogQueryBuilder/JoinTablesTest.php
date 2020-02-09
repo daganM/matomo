@@ -15,14 +15,14 @@ use Piwik\Tracker\Visit;
 /**
  * @group Core
  */
-class JoinTablesTest extends \PHPUnit_Framework_TestCase
+class JoinTablesTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var JoinTables
      */
     private $tables;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->tables = $this->makeTables(array(
             'log_visit',

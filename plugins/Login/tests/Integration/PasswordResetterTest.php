@@ -39,7 +39,7 @@ class PasswordResetterTest extends IntegrationTestCase
      */
     private $passwordResetter;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->passwordResetter = new PasswordResetter();

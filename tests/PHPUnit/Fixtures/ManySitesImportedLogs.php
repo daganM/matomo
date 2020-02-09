@@ -32,7 +32,7 @@ class ManySitesImportedLogs extends Fixture
     public $includeNginxJson = false;
     public $includeApiCustomVarMapping = false;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->setUpWebsitesAndGoals();
 
@@ -45,7 +45,7 @@ class ManySitesImportedLogs extends Fixture
         $this->setupSegments();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         LocationProvider::$providers = null;
         ManyVisitsWithGeoIP::unsetLocationProvider();

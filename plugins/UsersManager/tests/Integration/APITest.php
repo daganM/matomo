@@ -145,7 +145,7 @@ class APITest extends IntegrationTestCase
 
     private $email = 'userlogin@password.de';
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -161,7 +161,7 @@ class APITest extends IntegrationTestCase
         $this->api->addUser($this->login, $this->password, $this->email);
     }
     
-    public function tearDown()
+    public function tearDown(): void
     {
         Config::getInstance()->General['enable_update_users_email'] = 1;
 

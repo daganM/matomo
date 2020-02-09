@@ -30,7 +30,7 @@ class UpdateTest extends ConsoleCommandTestCase
 
     private $oldScriptName = null;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -44,7 +44,7 @@ class UpdateTest extends ConsoleCommandTestCase
         Updates_2_10_0_b5::$archiveBlobTables = null;
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         $_SERVER['SCRIPT_NAME'] = $this->oldScriptName;
 

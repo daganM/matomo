@@ -53,7 +53,7 @@ class TestCommandWithError extends ConsoleCommand
 
 class ConsoleTest extends ConsoleCommandTestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->application->addCommands([

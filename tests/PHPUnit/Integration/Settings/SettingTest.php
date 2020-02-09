@@ -23,15 +23,15 @@ use Piwik\Validators\NumberRange;
  * @group Settings
  * @group Setting
  */
-class SettingTest extends \PHPUnit_Framework_TestCase
+class SettingTest extends \PHPUnit\Framework\TestCase
 {
-    protected function setUp()
+    public function setUp(): void
     {
         $fixutre = new Fixture();
         $fixutre->createEnvironmentInstance();
     }
 
-    protected function tearDown()
+    public function tearDown(): void
     {
         $fixutre = new Fixture();
         $fixutre->clearInMemoryCaches();

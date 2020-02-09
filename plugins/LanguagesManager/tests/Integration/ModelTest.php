@@ -26,7 +26,7 @@ class ModelTest extends IntegrationTestCase
      */
     protected $model;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->model = new Model();
         parent::setUp();

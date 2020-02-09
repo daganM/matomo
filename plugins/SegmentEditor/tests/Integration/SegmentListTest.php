@@ -29,7 +29,7 @@ class SegmentListTest extends IntegrationTestCase
 
     private $idSite;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -42,7 +42,7 @@ class SegmentListTest extends IntegrationTestCase
         $segmentName = 'pageUrl';
 
         $segment = $this->list->findSegment($segmentName, $this->idSite);
-        $this->assertInternalType('array', $segment);
+        self::assertIsArray($segment);
         $this->assertSame($segmentName, $segment['segment']);
     }
 

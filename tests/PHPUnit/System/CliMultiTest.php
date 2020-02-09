@@ -39,7 +39,7 @@ class CliMultiTest extends SystemTestCase
      */
     private $responses = array();
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -66,12 +66,9 @@ class CliMultiTest extends SystemTestCase
         $this->assertEquals(array(), $response);
     }
 
-    /**
-     * @expectedException PHPUnit_Framework_Error
-     */
     public function test_request_shouldFail_IfUrlsIsNotAnArray()
     {
-        $this->setExpectedException('TypeError');
+        $this->expectException('TypeError');
         $this->cliMulti->request('');
     }
 

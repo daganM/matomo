@@ -30,7 +30,7 @@ class SystemSettingsTest extends IntegrationTestCase
         '2001:0db8:85a3:0000:0000:8a2e:0370:7334'
     );
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

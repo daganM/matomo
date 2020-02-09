@@ -19,7 +19,7 @@ use Piwik\Tests\Framework\TestCase\IntegrationTestCase;
  */
 class PluginNameTest extends IntegrationTestCase
 {
-    public function tearDown()
+    public function tearDown(): void
     {
         unset($_GET['pluginName']);
     }

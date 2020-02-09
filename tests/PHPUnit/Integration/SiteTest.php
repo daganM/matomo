@@ -22,7 +22,7 @@ class SiteTest extends IntegrationTestCase
 
     public $siteAppendix = ' foo';
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

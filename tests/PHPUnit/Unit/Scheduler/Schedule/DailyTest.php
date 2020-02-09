@@ -15,7 +15,7 @@ use Piwik\Scheduler\Schedule\Schedule;
 /**
  * @group Scheduler
  */
-class DailyTest extends \PHPUnit_Framework_TestCase
+class DailyTest extends \PHPUnit\Framework\TestCase
 {
     private static $_JANUARY_01_1971_09_00_00;
     private static $_JANUARY_01_1971_09_10_00;
@@ -23,7 +23,7 @@ class DailyTest extends \PHPUnit_Framework_TestCase
     private static $_JANUARY_02_1971_00_00_00;
     private static $_JANUARY_02_1971_09_00_00;
 
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         parent::setUpBeforeClass();
         self::$_JANUARY_01_1971_09_00_00 = mktime(9, 00, 00, 1, 1, 1971);
@@ -167,7 +167,7 @@ class DailyTest extends \PHPUnit_Framework_TestCase
      */
     private function getDailyMock($currentTime)
     {
-        $mock = $this->getMock('Piwik\Scheduler\Schedule\Daily', array('getTime'));
+        $mock = $this->createPartialMock('Piwik\Scheduler\Schedule\Daily', array('getTime'));
         $mock->expects($this->any())
             ->method('getTime')
             ->will($this->returnValue($currentTime));

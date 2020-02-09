@@ -24,14 +24,14 @@ class SomeVisitsCustomVariablesCampaignsNotHeuristics extends Fixture
     public $idGoal = 1;
     private $tmpHost = '';
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->setPiwikEnvironmentOverrides();
         $this->setUpWebsitesAndGoals();
         $this->trackVisits();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
     }
 

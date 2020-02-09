@@ -29,7 +29,7 @@ class MeasurableSettingsTest extends IntegrationTestCase
      */
     private $settings;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

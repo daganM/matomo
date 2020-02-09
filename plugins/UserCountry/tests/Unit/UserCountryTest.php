@@ -19,7 +19,7 @@ use Exception;
 require_once PIWIK_INCLUDE_PATH . '/plugins/UserCountry/UserCountry.php';
 require_once PIWIK_INCLUDE_PATH . '/plugins/UserCountry/functions.php';
 
-class UserCountryTest extends \PHPUnit_Framework_TestCase
+class UserCountryTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @group Plugins
@@ -128,12 +128,12 @@ class UserCountryTest extends \PHPUnit_Framework_TestCase
                      array("http://localhost/tests/resources/geoip.dat"));
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         // empty
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         $geoIpDirPath = PIWIK_INCLUDE_PATH . '/tests/lib/geoip-files';
         $filesToRemove = array('GeoIPISP.dat.broken', 'GeoIPOrg.dat.broken', 'GeoIPISP.dat', 'GeoIPOrg.dat');

@@ -42,7 +42,7 @@ class DataTableFactoryTest extends IntegrationTestCase
         'nb_visits' => 97
     );
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

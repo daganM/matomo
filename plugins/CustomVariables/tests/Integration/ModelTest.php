@@ -21,7 +21,7 @@ class ModelTest extends IntegrationTestCase
 {
     private static $cvarScopes = array('page', 'visit', 'conversion');
 
-    public function setUp()
+    public function setUp(): void
     {
         // do not call parent::setUp() since it expects database to be created,
         // but DB for this test is removed in tearDown
@@ -29,7 +29,7 @@ class ModelTest extends IntegrationTestCase
         self::$fixture->performSetUp();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         parent::tearDown();
 

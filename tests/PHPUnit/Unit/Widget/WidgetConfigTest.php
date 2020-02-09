@@ -15,14 +15,14 @@ use Piwik\Widget\WidgetConfig;
  * @group WidgetConfig
  * @group WidgetConfigTest
  */
-class WidgetConfigTest extends \PHPUnit_Framework_TestCase
+class WidgetConfigTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var WidgetConfig
      */
     private $config;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->config = new WidgetConfig();

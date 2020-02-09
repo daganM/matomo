@@ -25,7 +25,7 @@ use Piwik\Tests\Integration\Settings\IntegrationTestCase;
 class MeasurablePropertyTest extends IntegrationTestCase
 {
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         Db::destroyDatabaseObject();

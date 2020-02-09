@@ -35,7 +35,7 @@ class PurgeOldArchiveDataTest extends IntegrationTestCase
      */
     protected $application;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -57,7 +57,7 @@ class PurgeOldArchiveDataTest extends IntegrationTestCase
         self::$fixture->assertInvalidatedArchivesNotPurged(self::$fixture->february);
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         PurgeOldArchiveData::$todayOverride = null;
 

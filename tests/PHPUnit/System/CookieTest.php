@@ -23,14 +23,14 @@ class CookieTest extends SystemTestCase
 
     private $originalAssumeSecureValue;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->testVars = static::$fixture->getTestEnvironment();
         $this->originalAssumeSecureValue = Config::getInstance()->General['assume_secure_protocol'];
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         parent::tearDown();
         $this->testVars->overrideConfig('General', 'assume_secure_protocol', $this->originalAssumeSecureValue);

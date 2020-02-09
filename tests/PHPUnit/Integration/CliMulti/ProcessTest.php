@@ -15,14 +15,14 @@ use ReflectionProperty;
 /**
  * @group CliMulti
  */
-class ProcessTest extends \PHPUnit_Framework_TestCase
+class ProcessTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var Process
      */
     private $process;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -30,7 +30,7 @@ class ProcessTest extends \PHPUnit_Framework_TestCase
         $this->process = new Process('testPid');
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         if(is_object($this->process)){
             $this->process->finishProcess();

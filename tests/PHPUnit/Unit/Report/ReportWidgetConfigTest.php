@@ -16,14 +16,14 @@ use Piwik\Report\ReportWidgetConfig;
  * @group ReportWidgetConfig
  * @group ReportWidgetConfigTest
  */
-class ReportWidgetConfigTest extends \PHPUnit_Framework_TestCase
+class ReportWidgetConfigTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var ReportWidgetConfig
      */
     private $config;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->config = new ReportWidgetConfig();

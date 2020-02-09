@@ -14,13 +14,13 @@ use Piwik\Scheduler\Schedule\Hourly;
 /**
  * @group Scheduler
  */
-class HourlyTest extends \PHPUnit_Framework_TestCase
+class HourlyTest extends \PHPUnit\Framework\TestCase
 {
     private static $_JANUARY_01_1971_09_00_00;
     private static $_JANUARY_01_1971_09_10_00;
     private static $_JANUARY_01_1971_10_00_00;
 
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         parent::setUpBeforeClass();
         self::$_JANUARY_01_1971_09_00_00 = mktime(9, 00, 00, 1, 1, 1971);
@@ -73,7 +73,7 @@ class HourlyTest extends \PHPUnit_Framework_TestCase
          * Expected :
          *  getRescheduledTime returns Friday January 1 1971 10:00:00 GMT
          */
-        $mock = $this->getMock('Piwik\Scheduler\Schedule\Hourly', array('getTime'));
+        $mock = $this->createPartialMock('Piwik\Scheduler\Schedule\Hourly', array('getTime'));
         $mock->expects($this->any())
             ->method('getTime')
             ->will($this->returnValue(self::$_JANUARY_01_1971_09_00_00));
@@ -88,7 +88,7 @@ class HourlyTest extends \PHPUnit_Framework_TestCase
          * Expected :
          *  getRescheduledTime returns Friday January 1 1971 10:00:00 GMT
          */
-        $mock = $this->getMock('Piwik\Scheduler\Schedule\Hourly', array('getTime'));
+        $mock = $this->createPartialMock('Piwik\Scheduler\Schedule\Hourly', array('getTime'));
         $mock->expects($this->any())
             ->method('getTime')
             ->will($this->returnValue(self::$_JANUARY_01_1971_09_10_00));

@@ -22,7 +22,7 @@ use Piwik\Tracker;
 class DbTest extends IntegrationTestCase
 {
     private $tableName;
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->tableName = Common::prefixTable('option');

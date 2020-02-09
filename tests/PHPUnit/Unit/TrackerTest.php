@@ -17,7 +17,7 @@ use Piwik\Tracker;
  * @group TrackerTest
  * @group Tracker
  */
-class TrackerTest extends \PHPUnit_Framework_TestCase
+class TrackerTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var TestTracker
@@ -36,7 +36,7 @@ class TrackerTest extends \PHPUnit_Framework_TestCase
 
     private $time;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

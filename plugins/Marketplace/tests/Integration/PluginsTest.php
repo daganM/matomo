@@ -41,7 +41,7 @@ class PluginsTest extends IntegrationTestCase
      */
     private $consumerService;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

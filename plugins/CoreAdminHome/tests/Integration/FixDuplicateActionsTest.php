@@ -29,7 +29,7 @@ class FixDuplicateActionsTest extends IntegrationTestCase
      */
     protected $applicationTester = null;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

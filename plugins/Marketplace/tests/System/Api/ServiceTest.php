@@ -117,7 +117,7 @@ class ServiceTest extends SystemTestCase
         $service = $this->buildService();
         $response = $service->download($this->domain . '/api/2.0/plugins');
 
-        $this->assertInternalType('string', $response);
+        self::assertIsString($response);
         $this->assertNotEmpty($response);
         $this->assertStringStartsWith('{"plugins"', $response);
     }

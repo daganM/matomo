@@ -17,14 +17,14 @@ use Piwik\Plugins\CoreHome\Columns\Metrics\AverageTimeOnSite;
  * @group Plugin
  * @group API
  */
-class ConsoleRendererTest extends \PHPUnit_Framework_TestCase
+class ConsoleRendererTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var Console
      */
     private $builder;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->builder = $this->makeBuilder(array());
         DataTable\Manager::getInstance()->deleteAll();

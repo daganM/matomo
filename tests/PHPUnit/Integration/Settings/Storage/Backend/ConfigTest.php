@@ -41,7 +41,7 @@ class ConfigTest extends IntegrationTestCase
      */
     private $allBackends = array();
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

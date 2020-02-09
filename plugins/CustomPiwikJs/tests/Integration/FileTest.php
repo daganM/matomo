@@ -31,7 +31,7 @@ class FileTest extends IntegrationTestCase
      */
     private $dir = '';
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->dir = PIWIK_DOCUMENT_ROOT . '/plugins/CustomPiwikJs/tests/resources/';
@@ -44,7 +44,7 @@ class FileTest extends IntegrationTestCase
         }
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         // restore permissions changed by makeNotWritableFile()
         chmod($this->dir, 0777);

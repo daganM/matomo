@@ -15,18 +15,18 @@ use Piwik\Tests\Framework\TestCase\SystemTestCase;
 /**
  * @group Core
  */
-class FilesystemTest extends \PHPUnit_Framework_TestCase
+class FilesystemTest extends \PHPUnit\Framework\TestCase
 {
     private $testPath;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->testPath = PIWIK_INCLUDE_PATH . '/tmp/filesystemtest';
         Filesystem::mkdir($this->testPath);
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         Filesystem::unlinkRecursive($this->testPath, true);
 

@@ -21,7 +21,7 @@ use Symfony\Component\VarDumper\Cloner\Data;
  * @group DataTable
  * @group Core
  */
-class DataTableTest extends \PHPUnit_Framework_TestCase
+class DataTableTest extends \PHPUnit\Framework\TestCase
 {
     public function testApplyFilter()
     {
@@ -938,7 +938,7 @@ class DataTableTest extends \PHPUnit_Framework_TestCase
 
     public function testUnrelatedDataTableNotDestructed()
     {
-        $mockedDataTable = $this->getMock('\Piwik\DataTable', array('__destruct'));
+        $mockedDataTable = $this->createPartialMock('\Piwik\DataTable', array('__destruct'));
         $mockedDataTable->expects($this->never())->method('__destruct');
 
         $rowBeingDestructed = new Row();
@@ -982,7 +982,9 @@ class DataTableTest extends \PHPUnit_Framework_TestCase
      */
     public function testSubDataTableIsDestructed()
     {
-        $mockedDataTable = $this->getMock('\Piwik\DataTable', array('__destruct'));
+        $mockedDataTable = $this->getMockBuilder('\Piwik\DataTable')
+            ->onlyMethods(['__destruct'])
+            ->getMock();
         $mockedDataTable->expects($this->once())->method('__destruct');
 
         $rowBeingDestructed = new Row();

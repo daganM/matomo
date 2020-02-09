@@ -17,7 +17,7 @@ use Piwik\Tests\Framework\TestCase\ConsoleCommandTestCase;
  */
 class InvalidateReportDataTest extends ConsoleCommandTestCase
 {
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         parent::setUpBeforeClass();
 

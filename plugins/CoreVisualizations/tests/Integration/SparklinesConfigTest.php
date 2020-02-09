@@ -26,7 +26,7 @@ class SparklinesConfigTest extends IntegrationTestCase
      */
     private $config;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         FakeAccess::$superUser = true;
@@ -40,7 +40,7 @@ class SparklinesConfigTest extends IntegrationTestCase
         Translate::loadAllTranslations();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         Translate::reset();
 

@@ -27,7 +27,7 @@ class ImportLogsTest extends SystemTestCase
     /** @var ManySitesImportedLogs */
     public static $fixture = null; // initialized below class definition
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

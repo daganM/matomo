@@ -16,14 +16,14 @@ use Piwik\Category\Subcategory;
  * @group Category
  * @group CategoryTest
  */
-class CategoryTest extends \PHPUnit_Framework_TestCase
+class CategoryTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var Category
      */
     private $category;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->category = new Category();

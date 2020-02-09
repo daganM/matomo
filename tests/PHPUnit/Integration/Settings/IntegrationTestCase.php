@@ -26,7 +26,7 @@ class IntegrationTestCase extends \Piwik\Tests\Framework\TestCase\IntegrationTes
      */
     protected $settings;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         Db::destroyDatabaseObject();

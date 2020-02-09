@@ -22,21 +22,21 @@ class SetConfigTest extends ConsoleCommandTestCase
 {
     const TEST_CONFIG_PATH = '/tmp/test.config.ini.php';
 
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         self::removeTestConfigFile();
 
         parent::setUpBeforeClass();
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         self::removeTestConfigFile();
 
         parent::setUp();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         parent::tearDown();
         $this->makeLocalConfigWritable();

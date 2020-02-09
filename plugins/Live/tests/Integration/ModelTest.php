@@ -27,7 +27,7 @@ use Piwik\Tests\Integration\SegmentTest;
  */
 class ModelTest extends IntegrationTestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 

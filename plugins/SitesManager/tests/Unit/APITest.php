@@ -18,14 +18,14 @@ use Piwik\Translate;
  * @group APITest
  * @group Plugins
  */
-class APITest extends \PHPUnit_Framework_TestCase
+class APITest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var Api
      */
     private $api;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -38,7 +38,7 @@ class APITest extends \PHPUnit_Framework_TestCase
         $this->api = API::getInstance();
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         parent::tearDown();
 

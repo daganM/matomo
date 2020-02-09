@@ -14,14 +14,14 @@ use Piwik\DataTable\Row;
 /**
  * @group DataTableTest
  */
-class RowTest extends \PHPUnit_Framework_TestCase
+class RowTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var Row
      */
     private $row;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->row = new Row();
     }
