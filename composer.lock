@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6436d84b7a1cbf44a996b4795723ce68",
+    "content-hash": "82361f31d787b80e7ee725dfe0cba598",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -614,16 +614,16 @@
         },
         {
             "name": "matomo/referrer-spam-blacklist",
-            "version": "1.1.2",
+            "version": "3.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/matomo-org/referrer-spam-blacklist.git",
-                "reference": "6814af8832b31bbf02bebe1d057bc4b7b5bc1014"
+                "reference": "0968ea308924ed4b9c636133fff9eb54820626f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matomo-org/referrer-spam-blacklist/zipball/6814af8832b31bbf02bebe1d057bc4b7b5bc1014",
-                "reference": "6814af8832b31bbf02bebe1d057bc4b7b5bc1014",
+                "url": "https://api.github.com/repos/matomo-org/referrer-spam-blacklist/zipball/0968ea308924ed4b9c636133fff9eb54820626f7",
+                "reference": "0968ea308924ed4b9c636133fff9eb54820626f7",
                 "shasum": ""
             },
             "replace": {
@@ -635,20 +635,20 @@
                 "CC0-1.0"
             ],
             "description": "Community-contributed list of referrer spammers",
-            "time": "2018-08-08T20:37:48+00:00"
+            "time": "2020-01-07T13:07:59+00:00"
         },
         {
             "name": "matomo/searchengine-and-social-list",
-            "version": "1.4.4",
+            "version": "3.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/matomo-org/searchengine-and-social-list.git",
-                "reference": "5c29a58c6cab8a78c3e625ffc615e759ef8466d3"
+                "reference": "80ab98ed17ea5b72730f4f4d96acc03847440103"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matomo-org/searchengine-and-social-list/zipball/5c29a58c6cab8a78c3e625ffc615e759ef8466d3",
-                "reference": "5c29a58c6cab8a78c3e625ffc615e759ef8466d3",
+                "url": "https://api.github.com/repos/matomo-org/searchengine-and-social-list/zipball/80ab98ed17ea5b72730f4f4d96acc03847440103",
+                "reference": "80ab98ed17ea5b72730f4f4d96acc03847440103",
                 "shasum": ""
             },
             "replace": {
@@ -660,7 +660,7 @@
                 "CC0-1.0"
             ],
             "description": "Search engine and social network definitions used by Matomo (formerly Piwik)",
-            "time": "2018-05-25T11:09:26+00:00"
+            "time": "2020-01-13T09:01:25+00:00"
         },
         {
             "name": "maxmind-db/reader",
